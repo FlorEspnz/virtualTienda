@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-productos',
@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.scss'
 })
-export class ProductosComponent {
+export class ProductosComponent implements OnInit{
+  ngOnInit(): void {
+   alert('Navega')
+  }
+  
 
 }

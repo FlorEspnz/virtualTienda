@@ -3,15 +3,18 @@ import { Component, Input, inject } from '@angular/core';
 import { ProducsArray, Product } from '../interfaces/productos';
 import { ProductsService } from '../servicios/productos.service';
 import { ProductoDetallesComponent } from '../producto-detalles/producto-detalles.component';
+import { UsersService } from '../servicios/usuario.servicio';
+
 
 @Component({
   selector: 'app-cards',
   standalone: true,
   imports: [CommonModule, ProductoDetallesComponent],
   templateUrl: './cards.component.html',
-  styleUrl: './cards.component.css'
+  styleUrl: './cards.component.scss'
 })
 export class CardsComponent {
+servicios: any;
 closeModal() {
    this.individualProduct
 }
@@ -23,7 +26,7 @@ constructor(private user: UsersService){}
 
 
 getProduct(ev : number){
-  this.servicios.getIndividualProduct(ev).subscribe(res=>{
+  this.servicios.getIndividualProduct(ev).subscribe((res: { results: any[]; })=>{
     this.individualProduct= res.results[0]
 
   }

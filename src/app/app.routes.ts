@@ -7,3 +7,4 @@ export const routes: Routes = [
   { path: "productos", component: ProductosComponent },
 ];
  
+

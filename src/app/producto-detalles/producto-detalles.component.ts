@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../interfaces/productos';
 
+
 @Component({
-  selector: 'app-product-detail',
+  selector: 'app-producto-detalle',
   standalone: true,
   imports: [],
   templateUrl: './producto-detalles.component.html',
