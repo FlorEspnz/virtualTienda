@@ -7,12 +7,15 @@
 </div>
 
 <div class="productos">
-    <h1 class="h1">productos</h1>
+    <h1 class="titulo">productos</h1>
     <label for="searchBox"></label>
     <input type="text" name="searchBox" [(ngModel)]="searchData" (keyup)="getFileteredPruducts()" id="searchBox">
-    <div class="cards-container">
+    
         <app-cards [list]="data" *ngIf="searchData==''" class="max"></app-cards>
         <app-cards [list]="filteredData" *ngIf="searchData!=''" class="max"></app-cards>
-    </div>
+   
     <span class="loader" *ngIf="loader"></span>
 </div>
+
+
+
