@@ -7,5 +7,5 @@
     </div>
   </div>
   
-  <app-producto-detalle [product]="individualProduct" (close)="closeModal()" *ngIf="individualProduct?.id_producto>0"></app-producto-detalle>
+  <app-producto-detalle [product]="individualProduct" (click)="closeModal()" *ngIf="individualProduct?.id_producto>0"></app-producto-detalle>
   
