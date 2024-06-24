@@ -14,7 +14,7 @@ import { UsersService } from '../servicios/usuario.servicio';
   styleUrl: './cards.component.scss'
 })
 export class CardsComponent {
-servicios: any;
+
 closeModal() {
    this.individualProduct
 }
@@ -25,10 +25,11 @@ productService= inject(ProductsService)
 constructor(private user: UsersService){}
 
 
-getProduct(ev : number){
-  this.servicios.getIndividualProduct(ev).subscribe((res: { results: any[]; })=>{
+  getProduct(ev: number) {
+   
+  this.productService.getIndividualProduct(ev).subscribe((res: { results: any[]; })=>{
     this.individualProduct= res.results[0]
-
+  
   }
   )
   
