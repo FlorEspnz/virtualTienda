@@ -8,21 +8,26 @@ import { Users } from '../interfaces/usuario.interface';
 import { ProductsService } from '../servicios/productos.service';
 import { ProducsArray, Product } from '../interfaces/productos';
 import { FormsModule } from '@angular/forms';
+import { ProductoDetallesComponent } from "../producto-detalles/producto-detalles.component";
 
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports:[CardsComponent, CommonModule, FormsModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    imports: [CardsComponent, CommonModule, FormsModule, ProductoDetallesComponent]
 })
 export class HomeComponent implements OnInit{
+closeModal() {
+throw new Error('Method not implemented.');
+}
   data!: Product[];
   loader:boolean =false
   products= inject(ProductsService)
   filteredData!: Product[]| null;
   searchData:string ='';
+individualProduct: any;
   constructor(private dolarService: DolarService, 
     private users: UsersService){
     
