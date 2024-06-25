@@ -1,20 +1,49 @@
-.layout-container{
-    position:fixed;
-    z-index: 10;
+.layout-container {
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #4444445d;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    background-color: rgba(0, 0, 0, 0.5); 
 
-.modal{
-    position: relative;
-    
-    height: 70vh;
-    width: 70vw;
-    background-color: blanchedalmond;
+    .modal {
+        background-color: #F9B0FF;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(235, 91, 91, 0.1);
+        text-align: center;
+
+        img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        span {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+
+            &:first-of-type {
+                font-weight: bold;
+                font-size: 23px;
+            }
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #fd72e9;
+        color: #000000;
+       
+
+        &:hover {
+            background-color: #b3008f;
+        }
+    }
 }
